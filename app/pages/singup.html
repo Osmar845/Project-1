@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesLogin.css">
+    <script src="register.js" defer></script>
+    <title>Sing Up</title>
+</head>
+<body>
+    <form id="my-form-register">
+        <div class="login-welcome-row">
+            <a href="#" title="Logo">
+                <img src="/app/_img/logo.jpeg" alt="Logo" class="logo">
+            </a>
+            <h1>Sing Up 😃</h1>
+            <p>Please Enter Your Data</p>
+        </div>
+        <div class="input_wrapper">
+            <input type="text" id="fullname" name="fullname"
+            class="input_field" placeholder="Your Name" required>
+            <label for="name" class="input_label">Full Name:</label> 
+        </div>
+        <div class="input_wrapper">
+            <input type="text" id="user" name="user"
+            class="input_field" placeholder="Your User" required>
+            <label for="surname class="input_label">User:</label> 
+        </div>
+        <div class="input_wrapper">
+            <input type="email" id="email" name="email"
+            class="input_field" placeholder="Your Email" required>
+            <label for="email" class="input_label">Email:</label> 
+        </div>
+        <div class="input_wrapper">
+            <input id="password" type="password" class="input_field" placeholder="Your Password"
+            title="Introduce mínimo 6 caractéres, un simbolo y un número">
+            <!-- pattern="^(?=.*[A-Za-z])(?=.*^\d)[A-Za-z\d]{6,}$" required> -->
+            <label for="password" class="input_label">Password</label>
+        </div>
+        <button type="submit" class="my-form_button">Sing Up</button>
+        <!-- <div class="socials-row">
+            <a href="#" title="Use Google">
+                <img src="/app/_img/google.png" alt="Google">
+                Sing Up With Google
+            </a> -->
+        <p class="error escondido">Error registering</p>
+        </div>
+        <div class="my-form_actions">
+            <div class="my-form_row">
+                <span>Do you have an account?</span>
+                <a href="/" title="Access Account">Log in</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

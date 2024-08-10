@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contacto</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="stylesLogin.css">
+        <script src="contacto.js" defer></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav class="menu">
+            <ul>
+                <li  class="menu-item">
+                    <a href="/admin">Inicio</a>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="#">Portafolio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Imágenes</a></li>
+                        <li><a href="#">Archivos</a></li>
+                        <li><a href="#">PYTHON</a></li>
+                    </ul>
+                </li>
+                <li  class="menu-item">
+                    <a href="/contacto">Contacto</a>
+                </li>
+                <button id="btn-logout">Log Out</button>
+            </ul>
+        </nav>
+    </body>
+    <footer>
+    <section>
+        <h1 id="title-c">Contacto</h1>
+        <div class="container">
+        <div class="my-form">
+            <form id="contacto-form">
+                <div class="input_wrapper">
+                    <div class="input-field" id="name">
+                        <input type="text" id="name" name="name"
+                        class="input_field" placeholder="Your Name" required>
+                    </div>
+                    <div class="input_wrapper">
+                        <input type="email" id="email" name="email"
+                        class="input_field" placeholder="Your Email" required>
+                    </div>
+                    <div class="input_wrapper">
+                        <textarea  class="input_field" name="message" cols="32" rows="4"
+                        placeholder="Enter Your Message" required></textarea>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="my-form_button">Send</button>
+            </form>
+        </div>
+    </div>
+    </section>
+    <br>
+    <br>
+        <a class="correo" href="mailto:osmar.castaneda29@gmail.com">Contáctame Aquí</a>
+    <br>
+    <br>
+    <section class="foot">     
+        <h4>Redes Sociales</h4>
+        <br>
+        <br>
+        <a target="_blank" href="https://www.linkedin.com/in/osmar-casta%C3%B1eda-salinas/"><img src="/app/_img/linkedin.png" width="50" alt="Perfil de Linkedin" /></a>
+        <a target="_blank" href="https://www.facebook.com/osmar.castaneda.754/"><img src="/app/_img/face.png" width="50" alt="Perfil de Facebook" /></a>
+        <a target="_blank" href="https://www.instagram.com/osmar.castaneda/"><img src="/app/_img/insta.png" width="50" alt="Perfil de Instagram" /></a>
+    </section>
+        <br>
+        <br>
+        <p class="copy">Copyrigth 2024</p>
+    </footer>
+</html>

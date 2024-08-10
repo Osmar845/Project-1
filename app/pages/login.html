@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesLogin.css">
+    <script src="login.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <form id="my-form-login">
+        <div class="login-welcome-row">
+            <a href="#" title="Logo">
+                <img src="/app/_img/logo.jpeg" alt="Logo" class="logo">
+            </a>
+            <h1>Welcome Back &#x1F44F;</h1>
+            <p>Please Enter Your Data</p>
+        </div>
+        <div class="input_wrapper">
+            <input type="text" id="user" name="user"
+            class="input_field" placeholder="Your User" required>
+            <label for="User" class="input_label">User:</label> 
+        </div>
+        <div class="input_wrapper">
+            <input id="password" type="password" class="input_field" placeholder="Your Password"
+            title="Introduce mínimo 6 caractéres, un simbolo y un número">
+            <!-- pattern="^(?=.*[A-Za-z])(?=.*^\d)[A-Za-z\d]{6,}$" required> -->
+            <label for="password" class="input_label">Password</label>
+        </div>
+        <div>
+            <p class="page-link">
+                <span class="page-link-label"><a href="/forgotpassword">Forgot Password?</a></span>
+            </p>
+        </div>
+        <button type="submit" class="my-form_button">Login</button>
+        <!-- <div class="socials-row">
+            <a href="#" title="Use Google">
+                <img src="/app/_img/google.png" alt="Google">
+                Log in With Google
+            </a> -->
+        <p class="error escondido">Failed to login</p>
+        </div>
+        <div class="my-form_actions">
+            <div class="my-form_row">
+                <span>Don't have an account?</span>
+                <a href="/register" title="Create Account">sing Up</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
