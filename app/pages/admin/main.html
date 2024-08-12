@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="admin.js" defer></script>
-    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="/app/public/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>TO DO LIST</title>
 </head>
 <body>
-    <h1 id="title">Apre</h1>
     <nav class="menu">
         <ul>
             <li class="menu-item"><a href="/admin">Inicio</a></li>
@@ -23,9 +25,27 @@
             <button id="btn-logout">Log Out</button>
         </ul>
     </nav>
-    <section class="texto">
-        <h2>¿Qué es Less?</h2>
-        <p></p>
-    </section>
+    <div class="container">
+        <div class="perfil">
+            <div id="fecha">Monday, August 12</div>
+            <h1>Hello, {{Name}}..!</h1>
+            <span>We will achieve your goals</span>
+        </div>
+        <div class="agregar-tarea">
+            <input type="text" id="input" placeholder="Add a Task">
+            <i id="enter" class="fas fa-plus-circle"></i>
+        </div>
+        <div class="section-task">
+            <h3>These are your pending tasks</h3>
+            <ul class="lista">
+                <li>
+                    <i class="far fa-circle co" data="realizado" id="0"></i>
+                    <p class="text">do spanish homework</p>
+                    <i class="fas fa-trash de" data="eliminado" id="0"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="admin.js" defer></script>
 </body>
 </html>
