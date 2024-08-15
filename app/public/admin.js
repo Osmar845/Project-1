@@ -5,9 +5,17 @@ const botonEnter = document.getElementById("enter")
 const check = 'fa-check-circle';
 const unCheck = 'fa-circle';
 const lineThrough = 'line-through';
-const LIST = [];
-let id = 0;
+let LIST;
+let id;
 
+
+// Date function
+const FECHA = new Date();
+fecha.innerHTML = FECHA.toLocaleDateString('en-US',{
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+})
 
 // add task function
 function agregarTarea(tarea,id,realizado,eliminado){
@@ -32,11 +40,13 @@ function tareaRealizada(element2){
     element2.classList.toggle(check);
     element2.classList.toggle(unCheck);
     element2.parentNode.querySelector('.text').classList.toggle(lineThrough);
+    LIST[element2.id].realizado = LIST[element2.id].realizado ?false :true;
 }
 
 // delete task function
 function tareaEliminada(element2){
-    element2.parentNode.remove();
+    element2.parentNode.remove();;
+    LIST[element2.id].eliminado = true
 }
 
 //  Click Event 
@@ -44,7 +54,14 @@ botonEnter.addEventListener('click', () => {
     const tarea = input.value;
     if (tarea) {
         agregarTarea(tarea,id,false,false);
+        LIST.push({
+            nombre: tarea,
+            id: id,
+            realizado: false,
+            eliminado: false,
+        });
     }
+    localStorage.setItem('TO-DO',JSON.stringify(LIST));
     input.value = '';
     id++;
 });
@@ -54,7 +71,14 @@ document.addEventListener('keyup', function(event){
         const tarea = input.value;
         if (tarea) {
             agregarTarea(tarea,id,false,false);
+            LIST.push({
+                nombre: tarea,
+                id: id,
+                realizado: false,
+                eliminado: false,
+            });
         }
+        localStorage.setItem('TO-DO',JSON.stringify(LIST));
         input.value = '';
         id++;
     }
@@ -68,7 +92,30 @@ lista.addEventListener('click', function(event){
     } else if(elementData === 'eliminado') {
         tareaEliminada(element2);
     }
+    localStorage.setItem('TO-DO',JSON.stringify(LIST));
 });
+
+// LocalStorage
+let data = localStorage.getItem('TO-DO');
+if (data) {
+    LIST = JSON.parse(data);
+    id = LIST.length;
+    cargarLista(LIST);
+}else {
+    LIST = [];
+    id = 0;
+}
+
+function cargarLista(DATA) {
+    DATA.forEach(function (i){
+        agregarTarea(
+            i.nombre,
+            i.id,
+            i.realizado,
+            i.eliminado
+        );
+    });
+}
 
 // logout function
 document.addEventListener('DOMContentLoaded', () => {
