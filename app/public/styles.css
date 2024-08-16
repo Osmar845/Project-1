@@ -148,7 +148,7 @@ body {
   color: var(--blue-light);
 }
 aside {
-  background: #ffa5b4;
+  background: var(--secondary);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -162,7 +162,7 @@ aside {
 aside a {
   font-size: 1.5rem;
   text-decoration: none;
-  color: black;
+  color: var(--white2);
   padding: 10px 20px;
   border-radius: 5px;
   transition: all 0.5s ease;
@@ -180,7 +180,7 @@ aside li {
   margin-block: 15px;
 }
 aside a:hover {
-  background: black;
+  background: var(--primary-light);
   color: white;
 }
 aside:not(:hover) a span {
