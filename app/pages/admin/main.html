@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <title>Principal</title>
 </head>
 <body>
-    <nav class="menu">
-        <ul>
-            <li class="menu-item"><a href="/admin">Inicio</a></li>
-            <li class="menu-item"><a href="#">Portafolio</a>
-            <ul class="dropdown-content">
-                    <li><a href="/list">TO DO List</a></li>
-                    <li><a href="#">Página 3</a></li>
-                    <li><a href="#">Página 4</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="/contacto">Contacto</a></li>
-            <button id="btn-logout">Log Out</button>
-        </ul>
-    </nav>
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/admin"><i class="bi bi-house-door-fill"></i><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="/list"><i class="bi bi-list-task"></i><span>To-Do List</span></a>
+                </li>
+                <li>
+                    <a href="/contacto"><i class="bi bi-envelope-fill"></i><span>Contact</span></a>
+                </li>
+                <li>
+                    <a href="/"><i class="bi bi-box-arrow-left"></i><span id="btn-logout">Log Out</span></a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
     <script src="admin.js" defer></script>
 </body>
 </html>
