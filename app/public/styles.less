@@ -30,6 +30,8 @@
 }
 
 body {
+    justify-content: center;
+    display: flex;
     padding-top: 30px;
     background: linear-gradient(to bottom,
     var(--purple),var(--blue-light));
@@ -272,4 +274,25 @@ aside:not(:hover) a span {
 }
 aside:hover {
     width: 240px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    gap: 1rem;
+    background: var(--white);
+    width: 100%;
+    max-width: 70%;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    height: fit-content;
+    h1 {
+        color: var(--primary-dark);
+    }
+    p {
+        color: var(--text);
+    }
+
 }

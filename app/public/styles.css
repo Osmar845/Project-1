@@ -20,6 +20,8 @@
   --white2: #fafafb;
 }
 body {
+  justify-content: center;
+  display: flex;
   padding-top: 30px;
   background: linear-gradient(to bottom, var(--purple), var(--blue-light));
   height: 100vh;
@@ -188,4 +190,23 @@ aside:not(:hover) a span {
 }
 aside:hover {
   width: 240px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  position: relative;
+  gap: 1rem;
+  background: var(--white);
+  width: 100%;
+  max-width: 70%;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  height: fit-content;
+}
+.content h1 {
+  color: var(--primary-dark);
+}
+.content p {
+  color: var(--text);
 }
